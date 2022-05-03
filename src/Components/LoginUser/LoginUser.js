@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './style.css';
 function LoginUser({ Login, error }) {
     const [details, setDetails] = useState({name: "", email: "", password: ""});
 
@@ -11,12 +11,16 @@ function LoginUser({ Login, error }) {
 
   return (
       <form onSubmit={submitHandler}>
+          <div class="background">
+                 <div class="shape"></div>
+                <div class="shape"></div>
+          </div>
           <div className='form-inner'>
               <h2>Login</h2>
-              {(error != "") ? ( <div className='error'>{error}</div>) :""}
+              {(error !== "") ? ( <div className='error'>{error}</div>) :""}
               <div className='form-group'>
                   <label htmlFor='name'>Name:</label>
-                  <input type="text" name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
+                  <input type="text"  name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
               </div>
               <div className='form-group'>
                   <label htmlFor='email'>Email:</label>
@@ -24,9 +28,9 @@ function LoginUser({ Login, error }) {
               </div>
               <div className='form-group'>
                   <label htmlFor='password'>Password:</label>
-                  <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
+                  <input type="password"  name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
               </div>
-              <input type="submit" value="Login"/>
+              <button input type="submit" value="Login">Log In</button>
           </div>
       </form>
   )
