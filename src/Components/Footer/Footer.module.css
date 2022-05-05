@@ -1,16 +1,27 @@
 .footer {
-    display: flex;
-    flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 20%;
     padding-right: 20%;
     background-color: #0E153D;
     border-top: 7px solid #20D3C2;
-    border-bottom: 3px solid #20D3C2;
 }
 
 .contentcontainer {
     display: flex;
     flex-direction: row;
+}
+
+.paymentservicecontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paymentservices {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color:#080C24;
 }
