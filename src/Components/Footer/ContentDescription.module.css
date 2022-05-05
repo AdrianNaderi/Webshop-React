@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 100;
+
+}
+
+.column {
     margin-left: 20px;
     margin-right: 20px;
 }
