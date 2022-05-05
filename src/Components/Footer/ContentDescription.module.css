@@ -4,8 +4,8 @@
     color:#FFF;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font: weight 100px;
-    line-height: 1.7;
+    font-weight: 100px;
+    line-height: 2;
     margin-bottom: 40px;
 }
 
@@ -19,7 +19,7 @@
 }
 .column {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 55px;
 }
 
 .img {
@@ -30,12 +30,13 @@
 .decoration {
     position: relative;
     padding-top: -50%;
-    width: 50px;
-    border-top: 1px solid #20D3C2;
+    width: 40px;
+    border-top: 2px solid #17a294;
     border-bottom: 1px solid #0E153D;
     border-left: 1px solid #0E153D;
     border-right: 1px solid #0E153D;
     margin-left: 30px;
+    transform: translateY(5px);
 }
 
 .decorationcontainer {
