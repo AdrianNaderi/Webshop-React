@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './style.css';
+import RegisterUser from '../RegisterUser/RegisterUser';
+
 function LoginUser({ Login, error }) {
     const [details, setDetails] = useState({name: "", email: "", password: ""});
 
@@ -9,16 +10,17 @@ function LoginUser({ Login, error }) {
         Login(details);
     }
 
+
   return (
-      <form onSubmit={submitHandler}>
-          <div class="background">
-                 <div class="shape"></div>
-                <div class="shape"></div>
-          </div>
-          <div className='form-inner'>
-              <h2>Login</h2>
-              {(error !== "") ? ( <div className='error'>{error}</div>) :""}
-              <div className='form-group'>
+    <div className="form">
+        <div class="container">
+    <form onSubmit={submitHandler}>
+            <div classname="row">
+            <div class="column">
+            <div className="comp1">   
+          <h2>LOGIN</h2>
+          {(error !== "") ? ( <div className='error'>{error}</div>) :""}
+          <div className='form-group'>
                   <label htmlFor='name'>Name:</label>
                   <input type="text"  name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
               </div>
@@ -30,9 +32,19 @@ function LoginUser({ Login, error }) {
                   <label htmlFor='password'>Password:</label>
                   <input type="password"  name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
               </div>
-              <button input type="submit" value="Login">Log In</button>
-          </div>
+              <button input type="submit" class="button-text" value="Login">LOG IN</button>
+              
+    </div>
+    </div>
+    </div>
+
+          <RegisterUser/>
       </form>
+      
+      </div>
+      </div>
+
+
   )
 }
 

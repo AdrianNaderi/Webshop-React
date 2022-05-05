@@ -1,83 +1,82 @@
-.background{
-width: 430px;
-height: 520px;
-position: absolute;
-transform: translate(-50%,-50%);
-left: 50%;
-top: 50%;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* I will change this to modules if needed, this is a test for now */
+form{
+    display:flex;
+    justify-content:center;
 }
-.background .shape{
-height: 200px;
-width: 200px;
-position: absolute;
-border-radius: 50%;
+
+.container{
+    width: 100%;
+    display: inline-block;
+   
 }
-.shape:first-child{
-background:#70EFDD;
-left: -80px;
-top: -80px;
+.row {
+display: grid;
 }
-.shape:last-child{
-background: #3D405B;
-right: -70px;
-bottom: -130px;
+
+.socialMediaButtons {
+    padding: 10px 100px 10px 0px;
+  }
+
+.comp1 {
+    min-height: 70px;  
+    border: 50px solid white; 
+    background-color: #EEEEEE;
+    padding: 30px;
+    width:300px;
 }
-form .form-inner{
-    height: 520px;
-    width: 400px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
+.link {
+    color: #20D3C2;
+    font-weight: bold;
 }
-form .form-inner *{
-    font-family: 'Poppins',sans-serif;
-    color: #3D405B;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
+
+.comp2 {
+    min-height: 100px;  
+    border: 50px solid white; 
+    background-color: #EEEEEE;
+    padding: 30px;
+    margin-top: -10px;
+    width:300px;
 }
-form .form-inner h2{
-    font-size: 32px;
-    font-weight: bolder;
-    line-height: 42px;
-    text-align: center;
+
+p, label {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 100px;
+    line-height: 2;
 }
 input{
     display: block;
-    height: 50px;
+    height: 30px;
     width: 100%;
-    background-color: #DFE7FD;
     border-radius: 3px;
+    border: none;
     padding: 0 10px;
     margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
+    font-family:Roboto, sans-serif;
 }
 
+h2{
+    font-family:Roboto, sans-serif;
+    font-size: 14pt;
+    font-weight:400;
+}
 button{
     margin-top: 50px;
     width: 100%;
-    background: #70EFDD;
+    background: #20D3C2;
+    border: none;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
 }
-.logout{
-   
-    width: 20%;
-    background: #70EFDD;
-    padding: 15px 0;
-    cursor: pointer;
-    border: none;
+.button-text{
+    color:#FFFFFF;
+    font-family:Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 2;
+    width:100%;
 }
-
-
