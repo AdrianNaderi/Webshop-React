@@ -9,3 +9,8 @@
     border-top: 7px solid #20D3C2;
     border-bottom: 3px solid #20D3C2;
 }
+
+.contentcontainer {
+    display: flex;
+    flex-direction: row;
+}
