@@ -1,10 +1,11 @@
 .footer {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
     padding-left: 20%;
     padding-right: 20%;
     background-color: #0E153D;
-    border-top: 5px solid #20D3C2;
-    height: 200px;
+    border-top: 7px solid #20D3C2;
+    border-bottom: 3px solid #20D3C2;
 }
