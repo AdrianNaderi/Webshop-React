@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Components/Footer/Footer";
 import LoginUser from "./Components/LoginUser/LoginUser";
 import Navbar from "./Components/Navbar/Navbar";
 
@@ -46,6 +47,8 @@ function App() {
       ) : (
         <LoginUser Login={Login} error={error} />
       )}
+
+      <Footer />
     </div>
   );
 }
