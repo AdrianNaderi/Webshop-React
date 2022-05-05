@@ -1,6 +1,7 @@
 import classes from "./Content.module.css";
 import ContentContactInfo from "./ContentContactInfo";
 import ContentDescription from "./ContentDescription";
+import ContentUsefulLinks from "./ContentUsefulLinks";
 
 const Content = () => {
   return (
@@ -10,6 +11,9 @@ const Content = () => {
       </div>
       <div className={classes.container}>
         <ContentContactInfo />
+      </div>
+      <div className={classes.container}>
+        <ContentUsefulLinks />
       </div>
     </>
   );
