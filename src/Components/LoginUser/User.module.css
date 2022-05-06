@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-/* I will change this to modules if needed, this is a test for now */
 form{
     display:flex;
     justify-content:center;
+    
 }
 
 .container{
@@ -14,32 +14,6 @@ form{
 .row {
 display: grid;
 }
-
-.socialMediaButtons {
-    padding: 10px 100px 10px 0px;
-  }
-
-.comp1 {
-    min-height: 70px;  
-    border: 50px solid white; 
-    background-color: #EEEEEE;
-    padding: 30px;
-    width:300px;
-}
-.link {
-    color: #20D3C2;
-    font-weight: bold;
-}
-
-.comp2 {
-    min-height: 100px;  
-    border: 50px solid white; 
-    background-color: #EEEEEE;
-    padding: 30px;
-    margin-top: -10px;
-    width:300px;
-}
-
 p, label {
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -64,20 +38,16 @@ h2{
 }
 button{
     margin-top: 50px;
-    width: 100%;
     background: #20D3C2;
     border: none;
     padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
+    line-height: 2;
+    width:100%;
     border-radius: 50px;
     cursor: pointer;
-}
-.button-text{
     color:#FFFFFF;
     font-family:Roboto, sans-serif;
     font-size: 14px;
-    font-weight: 400px;
-    line-height: 2;
-    width:100%;
+    font-weight: bold;
 }
+

@@ -1,0 +1,18 @@
+.link {
+    color: #20D3C2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.comp2 {
+    min-height: 100px;  
+    border: 50px solid white; 
+    background-color: #EEEEEE;
+    padding: 30px;
+    margin-top: 10px;
+    width:300px;
+}

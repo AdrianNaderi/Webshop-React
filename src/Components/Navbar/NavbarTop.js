@@ -1,12 +1,13 @@
 import React from "react";
-import "./NavbarTop.css";
+import classes from "./NavbarTop.module.css";
 
 const NavbarTop = () => {
   return <>
-  <div class="top">
-  <img src="/img/topleft.png" class="img" />
-  <img src="/img/topright.png" class="img-right" />
-
+  <div className={classes.top}>
+    <div className={classes.images}>
+  <img src="/img/topleft.png" className={classes.imgleft}/>
+  <img src="/img/topright.png" class={classes.imgright} />
+</div>
 </div>
   </>;
 };

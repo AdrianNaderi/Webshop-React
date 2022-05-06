@@ -1,0 +1,19 @@
+.top{
+    background-color: #20D3C2;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.imgleft{
+   height: 30px;
+   margin-right:20%;
+   margin-left: 20%;
+}
+.imgright{
+    height:30px;
+    margin-right:20%;
+    margin-left: 20%; 
+}
+.images{
+    display: inline-flex;
+}
