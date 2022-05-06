@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import Footer from "./Components/Footer/Footer";
 import LoginUser from "./Components/LoginUser/LoginUser";
 import Navbar from "./Components/Navbar/Navbar";
+import "./Components/LoginUser/style.css";
 
 function App() {
   const adminUser = {
     email: "admin@admin.com",
     password: "admin123",
   };
+
 
   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
@@ -47,7 +49,6 @@ function App() {
       ) : (
         <LoginUser Login={Login} error={error} />
       )}
-
       <Footer />
     </div>
   );
