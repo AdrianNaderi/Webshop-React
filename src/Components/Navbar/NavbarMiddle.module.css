@@ -1,0 +1,35 @@
+.img {
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    height: 40px;
+    width: 35px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #20D3C2;
+    color: white;
+    border-width: 1px;
+}
+.search {
+    width: 300px;
+    height: 36px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-width: 1px;
+    outline: none;
+}
+.categories {
+    height: 40px;
+    width: 100px;
+}
+li {
+    list-style: none;
+    float: left;
+}
+
