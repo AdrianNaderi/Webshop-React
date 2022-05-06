@@ -18,7 +18,7 @@
 }
 .formgroup{
     display: block;
-    height: 50px;
+    height: 30px;
     width: 100%;
     border: none;
     margin-top: 8px;
@@ -57,20 +57,20 @@
 .footer{
     font-family: Roboto, sans-serif;
     font-size:14px;
-    margin:10px;
+    margin-top:5%;
 }
-.checkbox{
-    display: inline;
+.space{
 }
 .link{
     text-decoration: none;
     color:#20D3C2;
+    margin-left:25%;
 }
 .link:hover{
     text-decoration: underline;
 }
 .social{
     width:120%;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: -10%;
 }

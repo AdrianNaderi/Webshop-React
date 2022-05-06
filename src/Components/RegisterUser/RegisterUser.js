@@ -38,20 +38,15 @@ const handleSubmit  = () => {
                             account set up for you in no time. We will only ask you for information.</p>
                     </div>
 
-                    <div className={classes.formgroup}>
-                        <label>Username</label>
-                        <input type="text" name='name' id='name' value={name} onChange={(e) => handleInputChange(e)} />
-                    </div>
+                        <label className={classes.labelgroup}>Username</label>
+                        <input className={classes.formgroup} type="text" name='name' id='name' value={name} onChange={(e) => handleInputChange(e)} />
 
-                    <div className={classes.formgroup}>
-                        <label>Email address</label>
-                        <input type="text" name='email' id='email' value={email} onChange={(e) => handleInputChange(e)} />
-                    </div>
+                        <label className={classes.labelgroup}>Email address</label>
+                        <input className={classes.formgroup} type="text" name='email' id='email' value={email} onChange={(e) => handleInputChange(e)} />
 
-                    <div className={classes.formgroup}>
-                        <label>Password</label>
-                        <input type="password" name='password' id='password' value={password} onChange={(e) => handleInputChange(e)} />
-                    </div>
+                        <label className={classes.labelgroup}>Password</label>
+                        <input className={classes.formgroup} type="password" name='password' id='password' value={password} onChange={(e) => handleInputChange(e)} />
+
                     <div className={classes.font}>
                         <p>Your personal data will be used to support your experience throughout
                             this website, to manage access to your account, and for other purposes
