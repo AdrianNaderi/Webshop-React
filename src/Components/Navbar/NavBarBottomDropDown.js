@@ -4,15 +4,17 @@ const NavbarBottomDropDown = () => {
   const dropDownHandler = () => {};
 
   return (
-    <div className={classes.dropdown}>
-      <button onclick={dropDownHandler} className={classes.dropbtn}>
-        Browse Categories
-      </button>
-      <div id="myDropdown" className={classes["dropdown-content"]}>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <div className={classes.container}>
+      <i class="bi bi-list"></i>
+      <select className={classes.select}>
+        <option selected disabled>
+          Browse Categories
+        </option>
+        <option value="">Cat 1</option>
+        <option value="">Cat 2</option>
+        <option value="">Cat 3</option>
+        <option value="">Cat 4</option>
+      </select>
     </div>
   );
 };

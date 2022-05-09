@@ -5,31 +5,36 @@ import classes from "./NavbarBottom.module.css";
 const NavbarBottom = () => {
   return (
     <div className={classes.container}>
-      <nav className={classes.nav}>
-        <ul>
-          <li>
-            <NavbarBottomDropDown />
-          </li>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">Shop</a>
-          </li>
-          <li>
-            <a href="">Products</a>
-          </li>
-          <li>
-            <a href="">Categories</a>
-          </li>
-          <li>
-            <a href="">Pages</a>
-          </li>
-          <li>
-            <a href="">Blog</a>
-          </li>
-        </ul>
-      </nav>
+      <NavbarBottomDropDown />
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">
+            Shop <i className="bi bi-chevron-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Products <i className="bi bi-chevron-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Categories <i className="bi bi-chevron-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Pages <i className="bi bi-chevron-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+      </ul>
+      <button className={classes.btnOffer}>SPECIAL OFFER</button>
     </div>
   );
 };
