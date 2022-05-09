@@ -5,11 +5,11 @@ import NavbarTop from "./NavbarTop";
 
 const Navbar = () => {
   return (
-    <>
+    <header>
       <NavbarTop />
       <NavbarMiddle />
       <NavbarBottom />
-    </>
+    </header>
   );
 };
 
