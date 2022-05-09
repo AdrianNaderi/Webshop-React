@@ -1,13 +1,31 @@
 import React from "react";
-import "./NavbarTop.css";
+import classes from "./NavbarTop.module.css";
 
 const NavbarTop = () => {
   return <>
-  <div class="top">
-  <img src="/img/topleft.png" class="img" />
-  <img src="/img/topright.png" class="img-right" />
+    <div className={classes.top}>
+      <div className={classes.dropdown}>
+        <select className={classes.language}>
+          <option value="language">ENG</option>
+          <option value="language">SVE</option>
+        </select>
 
-</div>
+        <select className={classes.currency}>
+          <option value="currency">USD</option>
+          <option value="currency">SEK</option>
+        </select>
+      </div>
+
+      <div className={classes.topright}>
+        <p><a href="#" className={classes.right}>Newsletter</a></p>
+        {<p className={classes.space}>space</p>}
+        <p><a href="#" className={classes.right}>Contact Us</a></p>
+        <p className={classes.space}>space</p>
+        <p><a href="#" className={classes.right}>FAQs</a></p>
+        <p className={classes.space}>space</p>
+        <p><a href="#" className={classes.right}>[] [] [] [] []</a></p>
+      </div>
+    </div>
   </>;
 };
 

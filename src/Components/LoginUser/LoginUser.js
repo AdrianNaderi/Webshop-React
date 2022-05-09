@@ -1,51 +1,54 @@
 import React, { useState } from 'react'
 import RegisterUser from '../RegisterUser/RegisterUser';
+import classes from './LoginUser.module.css'
 
 function LoginUser({ Login, error }) {
-    const [details, setDetails] = useState({name: "", email: "", password: ""});
+    const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
     const submitHandler = e => {
         e.preventDefault();
 
         Login(details);
     }
+    return (
+        <div className={classes.form}>
+            <div class={classes.container}>
+                <form onSubmit={submitHandler}>
+                    <div class={classes.column}>
+                        <div className={classes.font}>
+                            <h2 className={classes.header}>LOGIN</h2>
+                        </div>
+
+                        {(error !== "") ? (<div className={classes.error}>{error}</div>) : ""}
+                        
+                        <label className={classes.labelgroup} htmlFor='name'>Name:</label>
+
+                        <input className={classes.formgroup} type="text" name='name' id='name' onChange={e => setDetails({ ...details, name: e.target.value })} value={details.name} />
+
+                        <label className={classes.labelgroup} htmlFor='email'>Email:</label>
+
+                        <input className={classes.formgroup} type="email" name='email' id='email' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} />
+
+                        <label className={classes.labelgroup} htmlFor='password'>Password:</label>
+
+                        <input className={classes.formgroup} type="password" name='password' id='password' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
+
+                        <button class={classes.button} input type="submit" value="Login">LOG IN</button>
+
+                        <div className={classes.footer}>
+                            <input className={classes.checkbox} type="checkbox" value="RememberMe" id="rememberMe" /> <label className={classes.checkbox} for="rememberMe">Remember me</label>
+                            <a href="url" className={classes.link}> Lost your password?</a>
+                            <img src="/img/socials.png" className={classes.social}></img>
+                        </div>
+
+                    </div>
+                </form>
+                <RegisterUser />
+            </div>
+        </div>
 
 
-  return (
-    <div className="form">
-        <div class="container">
-    <form onSubmit={submitHandler}>
-            <div classname="row">
-            <div class="column">
-            <div className="comp1">   
-          <h2>LOGIN</h2>
-          {(error !== "") ? ( <div className='error'>{error}</div>) :""}
-          <div className='form-group'>
-                  <label htmlFor='name'>Name:</label>
-                  <input type="text"  name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
-              </div>
-              <div className='form-group'>
-                  <label htmlFor='email'>Email:</label>
-                  <input type="email" name='email' id='email' onChange={e => setDetails({...details, email: e.target.value})} value={details.email}/>
-              </div>
-              <div className='form-group'>
-                  <label htmlFor='password'>Password:</label>
-                  <input type="password"  name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
-              </div>
-              <button input type="submit" class="button-text" value="Login">LOG IN</button>
-              
-    </div>
-    </div>
-    </div>
-
-          <RegisterUser/>
-      </form>
-      
-      </div>
-      </div>
-
-
-  )
+    )
 }
 
 export default LoginUser

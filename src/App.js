@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Footer from "./Components/Footer/Footer";
 import LoginUser from "./Components/LoginUser/LoginUser";
 import Navbar from "./Components/Navbar/Navbar";
-import "./Components/LoginUser/style.css";
 
 function App() {
   const adminUser = {
