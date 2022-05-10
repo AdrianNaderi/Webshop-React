@@ -13,6 +13,8 @@ const NavbarTop = () => {
         <select className={classes.currency}>
           <option value="currency">USD</option>
           <option value="currency">SEK</option>
+          <option value="currency">Euro</option>
+
         </select>
       </div>
 
