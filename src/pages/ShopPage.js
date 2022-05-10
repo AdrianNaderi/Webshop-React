@@ -1,7 +1,11 @@
+import ShopFilterSection from "../Components/ShopFilter/ShopFilterSection";
+
 const ShopPage = () => {
   return (
     <>
-      <h1>Shop Page </h1>
+      <div>
+        <ShopFilterSection />
+      </div>
     </>
   );
 };
