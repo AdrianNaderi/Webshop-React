@@ -1,21 +1,21 @@
 export const MenuItems = [
     {
-        title: <img src="/img/myaccount.jpg"/>,
+        title: <i class="bi bi-person">My account</i>,
         url: '#',
         cName: 'nav-links'
     },
     {
-        title: <img src="/img/whishlist.jpg"/>,
+        title: <i class="bi bi-heart"></i>,
         url: '#',
         cName: 'nav-links'
     },
     {
-        title: <img src="/img/compare.jpg"/>,
+        title: <i class="bi bi-shuffle"></i>,
         url: '#',
         cName: 'nav-links'
     },
     {
-        title: <img src="/img/cart.jpg"/>,
+        title: <i class="bi bi-bag">$0.00</i>,
         url: '#',
         cName: 'nav-links'
     },

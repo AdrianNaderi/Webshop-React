@@ -27,7 +27,11 @@
   height: 40px;
   width: 100px;
 }
-li {
+.container li {
   list-style: none;
   float: left;
+  padding: 10px;
+}
+.container a:link {
+  text-decoration: none;
 }

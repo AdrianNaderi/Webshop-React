@@ -10,7 +10,7 @@ const NavbarMiddle = () => {
        <select className={classes.categories}>
         <option value="Categories">Categories</option>
       </select>
-      <button className={classes.button}>Q</button>
+      <button className={classes.button}><i class="bi bi-search"></i></button>
        <ul>
          {MenuItems.map((item, index) => {
            return (
