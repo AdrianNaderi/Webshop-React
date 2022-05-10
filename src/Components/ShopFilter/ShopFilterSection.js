@@ -1,7 +1,7 @@
 const ShopFilterSection = () => {
   return (
     <>
-      <p>Hello</p>
+      <p>Filter</p>
     </>
   );
 };
