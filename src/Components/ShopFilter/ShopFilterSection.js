@@ -1,9 +1,10 @@
-import CategoryFilter from "./CategoryFilter";
+import StringFilter from "./StringFilter";
+import { categories } from "../../SD/placeholders";
 
 const ShopFilterSection = () => {
   return (
     <>
-      <CategoryFilter />
+      <StringFilter title={"Product Categories"} items={categories}/>
     </>
   );
 };
