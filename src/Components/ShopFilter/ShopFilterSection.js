@@ -1,7 +1,9 @@
+import CategoryFilter from "./CategoryFilter";
+
 const ShopFilterSection = () => {
   return (
     <>
-      <p>Filter</p>
+      <CategoryFilter />
     </>
   );
 };

@@ -1,14 +1,14 @@
 import Content from "../Components/Layout/Content";
-import OneSpace from "../Components/Layout/OneSpace";
+import Twentyfive from "../Components/Layout/Twentyfive";
 import ShopFilterSection from "../Components/ShopFilter/ShopFilterSection";
 
 const ShopPage = () => {
   return (
     <>
       <Content>
-        <OneSpace>
+        <Twentyfive>
           <ShopFilterSection />
-        </OneSpace>
+        </Twentyfive>
       </Content>
     </>
   );
