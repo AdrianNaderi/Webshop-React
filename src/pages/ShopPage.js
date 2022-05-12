@@ -1,7 +1,15 @@
+import Content from "../Components/Layout/Content";
+import Twentyfive from "../Components/Layout/Twentyfive";
+import ShopFilterSection from "../Components/ShopFilter/ShopFilterSection";
+
 const ShopPage = () => {
   return (
     <>
-      <h1>Shop Page </h1>
+      <Content>
+        <Twentyfive>
+          <ShopFilterSection />
+        </Twentyfive>
+      </Content>
     </>
   );
 };
