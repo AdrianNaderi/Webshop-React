@@ -17,3 +17,9 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.nav-hr-line {
+  border-top: 1px solid #c7cec8;
+  margin: 0;
+  padding: 0;
+}

@@ -15,6 +15,7 @@ import WishListPage from "./pages/WishListPage";
 import ComparePage from "./pages/ComparePage";
 import NotFound from "./pages/404";
 import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
 import TeamPage from "./pages/TeamPage";
 import PortfolioPage from "./pages/PortFolioPage";
 import PortFolioDetailPage from "./pages/PortFolioDetailPage";
@@ -68,7 +69,7 @@ function App() {
             <Route path="compare" element={<ComparePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="portfolio/details" element={<PortFolioDetailPage />} />
-            <Route path="blog" element={<TeamPage />} />
+            <Route path="blog" element={<BlogPage />} />
             <Route path="contact" element={<ContactPage />} />
           </Route>
 

@@ -1,11 +1,9 @@
-import classes from "./NavBarBottomDropDown.module.css";
+import classes from "./NavBarBrowseCategories.module.css";
 
-const NavbarBottomDropDown = () => {
-  const dropDownHandler = () => {};
-
+const NavBarBrowseCategories = () => {
   return (
     <div className={classes.container}>
-      <i class="bi bi-list"></i>
+      <i className="bi bi-list"></i>
       <select className={classes.select}>
         <option selected disabled>
           Browse Categories
@@ -19,4 +17,4 @@ const NavbarBottomDropDown = () => {
   );
 };
 
-export default NavbarBottomDropDown;
+export default NavBarBrowseCategories;

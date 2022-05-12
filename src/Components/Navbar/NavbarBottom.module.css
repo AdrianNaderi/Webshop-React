@@ -1,36 +1,44 @@
-.container {
-  background-color: white;
-  border-top: 1px solid #c7cec8;
-  display: flex;
-  justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.col-one {
+  width: 25%;
 }
 
-.container ul {
-  margin: 0;
-  padding: 10px;
+.col-two {
+  width: 50%;
+}
+
+.col-two ul {
+  margin-bottom: 0;
+  padding: 0;
   display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
-.container li {
-  background: white;
-  margin-left: 1.5rem;
-}
-
-.container li i {
+.col-two i {
   color: #20d3c2;
 }
 
-.container a {
+.col-two a {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   text-decoration: none;
 }
 
-.btnOffer {
-  margin: 5px;
-  margin-left: 80px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 50px;
+.col-tre {
+  width: 25%;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-offer {
+  font-family: "Roboto", sans-serif;
+  width: 145px;
+  height: 37px;
+  margin-top: 2%;
+  margin-right: 5%;
+  border-radius: 30px;
   font-size: 14px;
   font-weight: bold;
   background-color: #20d3c2;
@@ -38,14 +46,18 @@
   border: none;
 }
 
-.container a:hover,
-.container a:active,
-.container a.active {
+.col-two a:hover {
   color: #20d3c2;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
   border-bottom: 3px solid #20d3c2;
 }
 
-.container button:hover {
+.col-two a:active,
+.col-two a.active {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #20d3c2;
+}
+
+.col-tre button:hover {
   cursor: pointer;
 }
