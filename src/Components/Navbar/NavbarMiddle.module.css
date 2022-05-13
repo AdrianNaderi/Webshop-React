@@ -5,6 +5,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .button {
   height: 40px;
@@ -15,8 +17,11 @@
   color: white;
   border-width: 1px;
 }
+.searchbar {
+  
+}
 .search {
-  width: 300px;
+  width: 400px;
   height: 36px;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
