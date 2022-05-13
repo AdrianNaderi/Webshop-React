@@ -2,10 +2,10 @@ import FilterBadge from "./FilterBadge";
 import classes from "./StringFilterItem.module.css";
 
 const StringFilterItem = (props) => {
-  // const active = classes.active;
-
-  return (
-    <li className={`${classes.row}`}>
+    const activeStyle = props.active ? 'red' : 'black'
+  
+    return (
+    <li className={`${classes.row}`} onClick={() => props.onActive(props.item.name)} style={{color: activeStyle}}>
       <span>{props.item.name}</span>
       <FilterBadge quantity={props.item.quantity} />
     </li>
