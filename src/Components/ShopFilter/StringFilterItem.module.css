@@ -22,3 +22,25 @@
 .row :hover {
     cursor: pointer;
 }
+
+
+
+.border {
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.indicator {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 2px;
+}

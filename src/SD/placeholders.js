@@ -7,12 +7,12 @@ const shoes = { name: "Shoes", quantity: 12 };
 const watches = { name: "Watches", quantity: 20 };
 export const categories = [mens, womens, kids, hats, sunglasses, shoes, watches];
 
-const black = { name: "Black", quantity: 12 };
-const gray = { name: "Gray", quantity: 20 };
-const red = { name: "Red", quantity: 18 };
-const green = { name: "Green", quantity: 25 };
-const orange = { name: "Orange", quantity: 9 };
-const brown = { name: "Brown", quantity: 7 };
+const black = { name: "Black", quantity: 12, color: 'black' };
+const gray = { name: "Gray", quantity: 20, color: 'grey' };
+const red = { name: "Red", quantity: 18, color: 'red' };
+const green = { name: "Green", quantity: 25, color: 'green' };
+const orange = { name: "Orange", quantity: 9, color: 'orange' };
+const brown = { name: "Brown", quantity: 7, color: 'brown' };
 export const colors = [black, gray, red, green, orange, brown];
 
 const xs = { name: "XS", quantity: 18 };

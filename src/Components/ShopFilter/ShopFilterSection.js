@@ -5,7 +5,7 @@ const ShopFilterSection = () => {
   return (
     <>
       <StringFilter title={"Product Categories"} items={categories} />
-      <StringFilter title={"Filter by Color"} items={colors} />
+      <StringFilter title={"Filter by Color"} items={colors} checkbox={true}/>
       <StringFilter title={"Filter by Size"} items={sizes} />
     </>
   );
