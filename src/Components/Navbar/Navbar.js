@@ -7,7 +7,7 @@ import NavbarTop from "./NavbarTop";
 const Navbar = () => {
   return (
     <header>
-      <Content>
+      <Content color="#20D3C2">
         <NavbarTop />
       </Content>
       <Content>
