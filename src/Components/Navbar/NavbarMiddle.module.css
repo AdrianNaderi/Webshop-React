@@ -2,8 +2,8 @@
 }
 
 .container {
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .button {
@@ -31,7 +31,12 @@
   list-style: none;
   float: left;
   padding: 10px;
+  font-family: Roboto, sans-serif;
+  border: none;
 }
 .container a:link {
   text-decoration: none;
+}
+.container a:visited {
+  color: black;
 }
