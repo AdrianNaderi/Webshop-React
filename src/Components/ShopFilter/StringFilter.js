@@ -8,17 +8,18 @@ const StringFilter = (props) => {
 
   const handleActive = (name) => {
     if (name === target) {
+      props.onRemoveFilter();
       setTarget(null);
       return;
     }
+    props.onFiltering(name);
     setTarget(name);
   };
   let showCategories;
 
-  if (props.checkbox){
+  if (props.checkbox) {
     showCategories = props.items.map((item) => <StringFilterCheckboxItem key={item.name} item={item} active={item.name === target ? true : false} onActive={handleActive} />);
-  }
-  else{
+  } else {
     showCategories = props.items.map((item) => <StringFilterItem key={item.name} item={item} active={item.name === target ? true : false} onActive={handleActive} />);
   }
   return (

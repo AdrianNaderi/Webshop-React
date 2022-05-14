@@ -14,7 +14,7 @@ const StringFilterCheckboxItem = (props) => {
           </div>
           <div className={classes.label}>{props.item.name}</div>
         </div>
-        <FilterBadge quantity={props.item.quantity} />
+        <FilterBadge quantity={props.item.quantity} active={props.active} />
       </li>
     </div>
   );

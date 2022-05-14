@@ -7,7 +7,7 @@ const StringFilterItem = (props) => {
   return (
     <li className={`${classes.row} ${activeStyle}`} onClick={() => props.onActive(props.item.name)}>
       <span>{props.item.name}</span>
-      <FilterBadge quantity={props.item.quantity} />
+      <FilterBadge quantity={props.item.quantity} active={props.active}/>
     </li>
   );
 };
