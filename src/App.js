@@ -61,8 +61,8 @@ function App() {
           <Route path="/home/*" element={<BasePage />}>
             <Route path="" element={<HomePage />} />
             <Route path="shop" element={<ShopPage />} />
-            <Route path="shop/products" element={<ProductDetailPage />} />
-            <Route path="shop/products/:productId" element={<ProductsPage />} />
+            <Route path="shop/products" element={<ProductsPage />} />
+            <Route path="shop/products/:productId" element={<ProductDetailPage />} />
             <Route path="myaccount" element={<UserPage />} />
             <Route path="wishlist" element={<WishListPage />} />
             <Route path="compare" element={<ComparePage />} />
