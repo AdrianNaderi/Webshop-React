@@ -1,10 +1,10 @@
 import classes from "./FilterBadge.module.css";
 
 const FilterBadge = (props) => {
-  const active = classes.active;
+  const badgeStyle = props.active ? classes.active : classes.badge;
 
   return (
-    <div className={classes.badge}>
+    <div className={badgeStyle}>
       <span className={classes.quantity}>{props.quantity}</span>
     </div>
   );

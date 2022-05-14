@@ -1,7 +1,12 @@
 import classes from "./Content.module.css";
 
 const Content = (props) => {
-  return <div className={classes.content}>{props.children}</div>;
+  const color = props.color;
+  return (
+    <div className={classes.content} style={{ backgroundColor: color }}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Content;

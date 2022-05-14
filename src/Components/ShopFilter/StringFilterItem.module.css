@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 15px;
 
 }
@@ -14,3 +14,33 @@
     color: #20D3C2;
 }
 
+.notactive {
+    color: #000;
+}
+
+
+.row :hover {
+    cursor: pointer;
+}
+
+
+
+.border {
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.indicator {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 2px;
+}
