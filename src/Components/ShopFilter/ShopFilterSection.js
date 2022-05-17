@@ -8,17 +8,12 @@ import { getAllProducts, getAllProductsWithFilterAsync } from "../../lib/Filter/
 import { GetFilteredProducts } from "../../lib/endpoints";
 
 const ShopFilterSection = () => {
-  const categoryFilter = useSelector((state) => state.filter.categories);
-  const colorsFilter = useSelector((state) => state.filter.colors);
-  const sizesFilter = useSelector((state) => state.filter.sizes);
   const dispatch = useDispatch();
-  const { sendReq, data, error, loading } = useHttp(getAllProductsWithFilterAsync);
-
+  const { sendReq, data, error, loading } = useHttp(getAllProductsWithFilterAsync); //Will be moved to the place where we display products.
   console.log(data);
 
   const handleCategoryFiltering = (category) => {
     dispatch(filterActions.setCategoryFilter({ category: category }));
-    sendReq("Shes");
   };
 
   const handleColorFiltering = (color) => {
@@ -31,18 +26,18 @@ const ShopFilterSection = () => {
 
   const hanndleOnSaleFiltering = (e) => {
     if (e.target.checked) {
-      console.log("Im on sale");
+      dispatch(filterActions.setOnSaleFilter());
       return;
     }
-    console.log("Im not on sale.");
+    dispatch(filterActions.resetOnSaleFilter());
   };
 
   const hanndleInStockFiltering = (e) => {
     if (e.target.checked) {
-      console.log("In Stock");
+      dispatch(filterActions.setInStockFilter());
       return;
     }
-    console.log("No Stock");
+    dispatch(filterActions.resetInStockFilter());
   };
 
   return (

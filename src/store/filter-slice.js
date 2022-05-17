@@ -39,7 +39,7 @@ const filterSlice = createSlice({
     setInStockFilter(state) {
       state.inStock = "In Stock";
     },
-    resetOnSaleFilter(state) {
+    resetInStockFilter(state) {
       state.inStock = "";
     },
   },
