@@ -12,9 +12,6 @@ const ShopFilterSection = () => {
   const colorsFilter = useSelector((state) => state.filter.colors);
   const sizesFilter = useSelector((state) => state.filter.sizes);
   const dispatch = useDispatch();
-  // console.log("Categories   " + categoryFilter);
-  // console.log("Colors   " + colorsFilter);
-  // console.log("Sizes   " + sizesFilter);
   const { sendReq, data, error, loading } = useHttp(getAllProductsWithFilterAsync);
 
   console.log(data);
@@ -30,6 +27,22 @@ const ShopFilterSection = () => {
 
   const handleSizeFiltering = (size) => {
     dispatch(filterActions.setSizeFilter({ size: size }));
+  };
+
+  const hanndleOnSaleFiltering = (e) => {
+    if (e.target.checked) {
+      console.log("Im on sale");
+      return;
+    }
+    console.log("Im not on sale.");
+  };
+
+  const hanndleInStockFiltering = (e) => {
+    if (e.target.checked) {
+      console.log("In Stock");
+      return;
+    }
+    console.log("No Stock");
   };
 
   return (
@@ -60,6 +73,22 @@ const ShopFilterSection = () => {
           dispatch(filterActions.resetSizeFilter());
         }}
       />
+      <StringFilter
+        title={"Filter by Size"}
+        items={sizes}
+        onFiltering={(size) => handleSizeFiltering(size)}
+        onRemoveFilter={() => {
+          dispatch(filterActions.resetSizeFilter());
+        }}
+      />
+      <div>
+        <input type="checkbox" onChange={hanndleOnSaleFiltering} />
+        On Sale
+      </div>
+      <div>
+        <input type="checkbox" onChange={hanndleInStockFiltering} />
+        In Stock
+      </div>
     </>
   );
 };

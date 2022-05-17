@@ -4,6 +4,8 @@ const initialSearchFilter = {
   categories: "",
   colors: "",
   sizes: "",
+  onSale: "",
+  inStock: "",
 };
 
 const filterSlice = createSlice({
@@ -26,7 +28,19 @@ const filterSlice = createSlice({
       state.sizes = action.payload.size;
     },
     resetSizeFilter(state) {
-      state.categories = "";
+      state.sizes = "";
+    },
+    setOnSaleFilter(state) {
+      state.onSale = "On Sale";
+    },
+    resetOnSaleFilter(state) {
+      state.sizes = "";
+    },
+    setInStockFilter(state) {
+      state.inStock = "In Stock";
+    },
+    resetOnSaleFilter(state) {
+      state.inStock = "";
     },
   },
 });
