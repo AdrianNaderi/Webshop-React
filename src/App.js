@@ -22,7 +22,6 @@ import PortFolioDetailPage from "./pages/PortFolioDetailPage";
 import ContactPage from "./pages/ContactPage";
 
 function App() {
-
   return (
     <>
       <Navbar />
@@ -30,7 +29,6 @@ function App() {
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Navigate replace to="/home" />} />
-
           <Route path="/home/*" element={<BasePage />}>
             <Route path="" element={<HomePage />} />
             <Route path="shop" element={<ShopPage />} />
@@ -45,15 +43,11 @@ function App() {
             <Route path="blog" element={<BlogPage />} />
             <Route path="contact" element={<ContactPage />} />
           </Route>
-
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/shoppingcart/:cartId" element={<CheckoutPage />} />
-
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
         </Routes>
-
-        
       </main>
       <Footer />
     </>
