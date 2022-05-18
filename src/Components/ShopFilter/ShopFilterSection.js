@@ -29,12 +29,11 @@ const ShopFilterSection = () => {
   };
 
   const hanndleOnSaleFiltering = (e) => {
-    console.log(e);
-    // if (e.target.checked) {
-    //   dispatch(filterActions.setOnSaleFilter());
-    //   return;
-    // }
-    // dispatch(filterActions.resetOnSaleFilter());
+    if (e.target.checked) {
+      dispatch(filterActions.setOnSaleFilter());
+      return;
+    }
+    dispatch(filterActions.resetOnSaleFilter());
   };
 
   const hanndleInStockFiltering = (e) => {
@@ -43,6 +42,10 @@ const ShopFilterSection = () => {
       return;
     }
     dispatch(filterActions.resetInStockFilter());
+  };
+
+  const handleBrandFiltering = (brand) => {
+    dispatch(filterActions.setBrandFilter({ brand: brand }));
   };
 
   return (
@@ -81,10 +84,17 @@ const ShopFilterSection = () => {
           dispatch(filterActions.resetSizeFilter());
         }}
       />
-      <ProductStatusFilters title="Product Status" onSaleChange={(e) => hanndleOnSaleFiltering(e)} onStockChange={(e) => hanndleInStockFiltering(e)} />
       <div>
-        <BrandFiltering title="Filter by Brand" brands={brands} />
+        <BrandFiltering
+          title="Filter by Brand"
+          brands={brands}
+          onFiltering={(brand) => handleBrandFiltering(brand)}
+          onRemoveFilter={() => {
+            dispatch(filterActions.resetBrandFilter());
+          }}
+        />
       </div>
+      <ProductStatusFilters title="Product Status" onSaleChange={(e) => hanndleOnSaleFiltering(e)} onStockChange={(e) => hanndleInStockFiltering(e)} />
     </>
   );
 };

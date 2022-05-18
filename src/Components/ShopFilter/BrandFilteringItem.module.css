@@ -9,3 +9,21 @@
 
 .brand {
 }
+
+.filter {
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 0px;
+    border: 1px solid #E3E3E3;
+    text-align: center;
+    width: 35%;
+    margin: 5px;
+}
+
+.active {
+    background-color: #ececec;;
+}

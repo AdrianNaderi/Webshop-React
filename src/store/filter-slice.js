@@ -46,7 +46,7 @@ const filterSlice = createSlice({
     setBrandFilter(state, action) {
       state.brand = action.payload.brand;
     },
-    setBrandFilter(state, action) {
+    resetBrandFilter(state, action) {
       state.brand = "";
     },
   },
