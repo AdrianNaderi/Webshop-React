@@ -6,17 +6,17 @@ export const MenuItems = [
   },
   {
     title: <i class="bi bi-heart"></i>,
-    url: "#",
+    url: "/home/wishlist",
     cName: "nav-links",
   },
   {
     title: <i class="bi bi-shuffle"></i>,
-    url: "#",
+    url: "/home/compare",
     cName: "nav-links",
   },
   {
     title: <i class="bi bi-bag">$0.00</i>,
-    url: "#",
+    url: "/shoppingcart",
     cName: "nav-links",
   },
 ];
