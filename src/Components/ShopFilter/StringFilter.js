@@ -23,10 +23,10 @@ const StringFilter = (props) => {
     showCategories = props.items.map((item) => <StringFilterItem key={item.name} item={item} active={item.name === target ? true : false} onActive={handleActive} />);
   }
   return (
-    <>
+    <div className={classes.filter}>
       <h4 className={classes.title}>{props.title}</h4>
       <ul className={classes.list}>{showCategories}</ul>
-    </>
+    </div>
   );
 };
 

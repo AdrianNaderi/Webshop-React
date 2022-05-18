@@ -6,6 +6,7 @@ const initialSearchFilter = {
   sizes: "",
   onSale: "",
   inStock: "",
+  brand: "",
 };
 
 const filterSlice = createSlice({
@@ -41,6 +42,12 @@ const filterSlice = createSlice({
     },
     resetInStockFilter(state) {
       state.inStock = "";
+    },
+    setBrandFilter(state, action) {
+      state.brand = action.payload.brand;
+    },
+    setBrandFilter(state, action) {
+      state.brand = "";
     },
   },
 });

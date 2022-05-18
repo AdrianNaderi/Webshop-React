@@ -1,15 +1,19 @@
 import StringFilter from "./StringFilter";
-import { categories, colors, sizes } from "../../SD/placeholders";
+import { categories, colors, sizes, brands } from "../../SD/placeholders";
 import RangeFilter from "./RangeFilter";
 import { useDispatch, useSelector } from "react-redux";
 import { filterActions } from "../../store/filter-slice";
 import useHttp from "../../hooks/useHttp";
 import { getAllProducts, getAllProductsWithFilterAsync } from "../../lib/Filter/ShopFilterRequests";
 import { GetFilteredProducts } from "../../lib/endpoints";
+import Brands from "../Brands/Brands";
+import BrandFiltering from "./BrandFiltering";
+import ProductStatusFilters from "./ProductStatusFilters";
 
 const ShopFilterSection = () => {
   const dispatch = useDispatch();
   const { sendReq, data, error, loading } = useHttp(getAllProductsWithFilterAsync); //Will be moved to the place where we display products.
+
   console.log(data);
 
   const handleCategoryFiltering = (category) => {
@@ -25,11 +29,12 @@ const ShopFilterSection = () => {
   };
 
   const hanndleOnSaleFiltering = (e) => {
-    if (e.target.checked) {
-      dispatch(filterActions.setOnSaleFilter());
-      return;
-    }
-    dispatch(filterActions.resetOnSaleFilter());
+    console.log(e);
+    // if (e.target.checked) {
+    //   dispatch(filterActions.setOnSaleFilter());
+    //   return;
+    // }
+    // dispatch(filterActions.resetOnSaleFilter());
   };
 
   const hanndleInStockFiltering = (e) => {
@@ -76,13 +81,9 @@ const ShopFilterSection = () => {
           dispatch(filterActions.resetSizeFilter());
         }}
       />
+      <ProductStatusFilters title="Product Status" onSaleChange={(e) => hanndleOnSaleFiltering(e)} onStockChange={(e) => hanndleInStockFiltering(e)} />
       <div>
-        <input type="checkbox" onChange={hanndleOnSaleFiltering} />
-        On Sale
-      </div>
-      <div>
-        <input type="checkbox" onChange={hanndleInStockFiltering} />
-        In Stock
+        <BrandFiltering title="Filter by Brand" brands={brands} />
       </div>
     </>
   );
