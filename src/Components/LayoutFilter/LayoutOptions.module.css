@@ -1,6 +1,9 @@
 .position {
-    padding: 30px;
-    text-align: end;
-    margin: 0px 10px;
+    display: flex;
+    direction: row;
+    justify-content: end;
 }
 
+.container {
+    padding: 20px 0px;
+}
