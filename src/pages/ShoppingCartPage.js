@@ -1,8 +1,17 @@
+import Content from "../Components/Layout/Content";
+import Twentyfive from "../Components/Layout/Twentyfive";
+import Cart from "../Components/ShoppingCart/Cart";
+
 const ShoppingCartPage = () => {
   return (
     <>
-      <h1>ShoppingCart Page </h1>
+      <Content>
+        <Twentyfive>
+          <Cart />
+        </Twentyfive>
+      </Content>
     </>
+    
   );
 };
 

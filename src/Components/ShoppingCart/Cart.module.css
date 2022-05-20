@@ -1,0 +1,22 @@
+.container h2 {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+.items, .container .titles {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.items {
+    border-top: 1px solid rgb(187,187,187);
+    padding: 1rem 0;
+}
+
+.titles .product-title {
+    padding-left: 0.5rem;
+}
+
