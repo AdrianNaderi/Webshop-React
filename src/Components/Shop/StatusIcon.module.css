@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.icon {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  color:#FFF;
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.new {
+  background-color: #20D3C2;
+}
+
+.hot {
+  background-color: #FE4545;
+}
+
+.sale {
+  background-color: #64CB83;
+}

@@ -39,3 +39,9 @@ const largegrid = { name: "largegrid", value: "bi bi-grid-3x3-gap-fill" };
 export const displayoptions = [list, smallgrid, largegrid];
 
 export const countOptions = [9, 12, 18, 24];
+
+const hot = { status: "hot", value: "hot" };
+const sale = { status: "sale", value: "-23%" };
+const news = { status: "new", value: "new" };
+
+export const statuses = [hot, sale, news];

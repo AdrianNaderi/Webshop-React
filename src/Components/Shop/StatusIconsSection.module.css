@@ -1,0 +1,12 @@
+.container {
+  margin-top: 10px;
+  margin-left: 10px;
+
+display: inline-block;
+position: absolute;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+}

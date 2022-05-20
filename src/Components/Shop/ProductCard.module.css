@@ -3,25 +3,33 @@
 
 .base {
     display: inline-block;
-    flex-grow: 1;
     background-color: #EEEEEE;
     border-radius: 5px;
-    width: 100%;
     height: 295px;
     cursor: pointer;
 }
 
 .card {
-    height: 250px;
+    z-index: 1;
 }
 
 .img {
-    width: 90%;
+    position: relative;
+    top: -50px;
+    z-index: 2;
 }
 
 .lower {
     background-color:#0E153D;
     border-radius: 0px 0px 5px 5px;
+    position: relative;
+    top: 250px;
+}
+
+.imgback {
+    position: relative;
+    top: -295px;
+    z-index: 2; 
 }
 
 .product-name {
@@ -32,7 +40,8 @@
 }
 
 .card-back {
-    border-radius: 5px 5px 5px 5px;
-    background-color:#0E153D;
+    position: relative;
     height: 295px;
+    z-index: 3;
+    background-color:#0e153dde;
 }
