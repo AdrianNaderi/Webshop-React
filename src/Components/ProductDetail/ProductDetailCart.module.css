@@ -1,0 +1,82 @@
+.container {
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-wrapper {
+  width: 88px;
+  height: 36px;
+  display: inline-flex;
+}
+
+.quantity-wrapper button,
+input {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.quantity-wrapper input {
+  border: 1px solid #aaaaaa;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  width: 30px;
+}
+
+.quantity-wrapper .minus {
+  background-color: white;
+  width: 30px;
+  border: 1px solid #aaaaaa;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.quantity-wrapper .plus {
+  width: 30px;
+  background-color: #20d3c2;
+  color: white;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-add {
+  margin: 0 30px;
+  font-family: "Roboto", sans-serif;
+  width: 148px;
+  height: 37px;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: #20d3c2;
+  color: white;
+  border: none;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn-add span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-add span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.btn-add:hover span {
+  padding-right: 15px;
+}
+
+.btn-add:hover span:after {
+  opacity: 1;
+  right: 0;
+}

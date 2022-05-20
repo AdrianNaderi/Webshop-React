@@ -1,0 +1,9 @@
+.container {
+  background-color: #eeeeee;
+  border: 2px solid #eeeeee;
+  border-radius: 10px;
+}
+
+.container:hover {
+  border: 2px solid #20d3c2;
+}
