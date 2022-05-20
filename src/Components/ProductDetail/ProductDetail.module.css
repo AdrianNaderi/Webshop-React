@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.container {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  height: 25%;
+}
+
+.description h3 {
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.detail {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.pricing hr {
+  margin: 20px 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+.pricing span {
+  margin-right: 20px;
+}
+
+.pricing i {
+  color: green;
+}
+
+.sale {
+  font-size: 24px;
+  font-weight: 600;
+  color: #20d3c2;
+}
+
+.price {
+  color: #aaaaaa;
+  text-decoration: line-through;
+}
+
+.tags {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tags button {
+  background-color: white;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+}
+
+.pricing {
+  height: 25%;
+}
+
+.cat-span {
+  color: #20d3c2;
+}

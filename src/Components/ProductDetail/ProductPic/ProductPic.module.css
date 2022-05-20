@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+.main-img {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.side-img {
+  display: flex;
+}
+
+.side-img ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
+}

@@ -32,14 +32,14 @@ const NavbarBottom = () => {
           <li>
             <NavLink
               end
-              to="/home/shop/products"
+              to="/home/shop/products/"
               className={(navData) => (navData.isActive ? classes.active : "")}
             >
               Products <i className="bi bi-chevron-down"></i>
             </NavLink>
           </li>
           <li>
-            <a href="#">
+            <a href="/">
               Categories <i className="bi bi-chevron-down"></i>
             </a>
           </li>

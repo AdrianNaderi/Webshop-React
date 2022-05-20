@@ -5,13 +5,19 @@ const NavBarBrowseCategories = () => {
     <div className={classes.container}>
       <i className="bi bi-list"></i>
       <select className={classes.select}>
-        <option selected disabled>
-          Browse Categories
+        <option value="">Browse Categories</option>
+        <option value="" disabled>
+          Cat 1
         </option>
-        <option value="">Cat 1</option>
-        <option value="">Cat 2</option>
-        <option value="">Cat 3</option>
-        <option value="">Cat 4</option>
+        <option value="" disabled>
+          Cat 2
+        </option>
+        <option value="" disabled>
+          Cat 3
+        </option>
+        <option value="" disabled>
+          Cat 4
+        </option>
       </select>
     </div>
   );

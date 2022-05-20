@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
-import LoginUser from "./Components/LoginUser/LoginUser";
 import Navbar from "./Components/Navbar/Navbar";
 import BasePage from "./pages/BasePage";
 import HomePage from "./pages/HomePage";
