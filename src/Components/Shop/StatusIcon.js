@@ -11,7 +11,6 @@ const StatusIcon = (props) => {
   if (props.status === "sale") {
     iconStyle = classes.sale;
   }
-  console.log(props.status);
   return <div className={`${iconStyle} ${classes.icon}`}>{props.value}</div>;
 };
 

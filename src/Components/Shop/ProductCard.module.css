@@ -41,7 +41,13 @@
 
 .card-back {
     position: relative;
+    border-radius: 5px;
     height: 295px;
     z-index: 3;
     background-color:#0e153dde;
+}
+
+.liftup {
+    text-align: end;
+    margin-right: 20px;
 }

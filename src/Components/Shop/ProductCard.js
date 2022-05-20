@@ -1,4 +1,5 @@
 import { useReducer, useState } from "react";
+import NavigationSection from "./NavigationSection";
 import classes from "./ProductCard.module.css";
 import StatusIconSection from "./StatusIconsSection";
 
@@ -39,6 +40,9 @@ const ProductCard = (props) => {
           <>
             <div className={classes["card-back"]}>
               <div>Nav</div>
+              <div className={classes.liftup}>
+                <NavigationSection />
+              </div>
             </div>
             <img src="/img/dress.png" className={classes.imgback} />
           </>
