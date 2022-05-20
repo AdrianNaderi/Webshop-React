@@ -1,5 +1,6 @@
 import Content from "../Components/Layout/Content";
 import Seventyfive from "../Components/Layout/Seventyfive";
+import Shop from "../Components/Shop/Shop";
 import Twentyfive from "../Components/Layout/Twentyfive";
 import WhiteSpace from "../Components/Layout/WhiteSpace";
 import LayoutFilterSection from "../Components/LayoutFilter/LayoutFilterSection";
@@ -23,6 +24,9 @@ const ShopPage = () => {
         <Twentyfive>
           <ShopFilterSection />
         </Twentyfive>
+        <Seventyfive>
+          <Shop />
+        </Seventyfive>
       </Content>
     </>
   );
