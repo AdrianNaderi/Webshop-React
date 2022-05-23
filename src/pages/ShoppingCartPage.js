@@ -6,9 +6,7 @@ const ShoppingCartPage = () => {
   return (
     <>
       <Content>
-        <Twentyfive>
           <Cart />
-        </Twentyfive>
       </Content>
     </>
     
