@@ -30,3 +30,12 @@ const rosimo = { name: "rosimo" };
 const dallas = { name: "dallas" };
 const concord = { name: "concord" };
 export const brands = [bexim, lighton, dismis, rosimo, dallas, concord];
+
+export const orderByOptions = ["Default Sorting", "Ascendning", "Descending"];
+
+const list = { name: "list", value: "bi bi-list-ul" };
+const smallgrid = { name: "smallgrid", value: "bi bi-grid-fill" };
+const largegrid = { name: "largegrid", value: "bi bi-grid-3x3-gap-fill" };
+export const displayoptions = [list, smallgrid, largegrid];
+
+export const countOptions = [9, 12, 18, 24];

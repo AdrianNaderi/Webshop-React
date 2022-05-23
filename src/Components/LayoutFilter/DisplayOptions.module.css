@@ -1,0 +1,18 @@
+.options {
+    display: inline-block;
+    background-color:#0E153D;
+    border-radius: 7px;
+    color: #FFF;
+    padding: 12px;
+    margin: 0px 10px;
+}
+
+.icon {
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.active {
+    color: #20D3C2;
+}

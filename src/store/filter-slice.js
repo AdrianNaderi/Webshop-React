@@ -7,6 +7,8 @@ const initialSearchFilter = {
   onSale: "",
   inStock: "",
   brand: "",
+  orderBy: "Ascending",
+  display: "list",
 };
 
 const filterSlice = createSlice({
@@ -46,8 +48,17 @@ const filterSlice = createSlice({
     setBrandFilter(state, action) {
       state.brand = action.payload.brand;
     },
-    resetBrandFilter(state, action) {
+    resetBrandFilter(state) {
       state.brand = "";
+    },
+    setOrderBy(state, action) {
+      state.orderBy = action.payload.orderBy;
+    },
+    setDisplayCount(state, action) {
+      state.orderBy = action.payload.displayCount;
+    },
+    setDisplay(state, action) {
+      state.display = action.payload.display;
     },
   },
 });
