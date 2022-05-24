@@ -11,7 +11,7 @@ const ProductDetail = () => {
   return (
     <div className={classes.container}>
       <div className={classes.description}>
-        <h3>TITLE</h3>
+        <h3 className={classes["cat-span"]}>NAME</h3>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ea nulla fuga
           distinctio nostrum. Quod debitis exercitationem nostrum eligendi aliquid iure, dignissimos
