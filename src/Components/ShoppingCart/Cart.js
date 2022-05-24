@@ -6,7 +6,6 @@ const Cart = () => {
     const cart = useSelector((state) => state.cart)
     return (
      <div className={classes.container}>
-       <h2>Shopping Cart</h2>
        {cart.cartItems.lenght === 0 ? (
          <div className="cart-empty">
            <p>Your cart is currently empty</p>
@@ -17,12 +16,13 @@ const Cart = () => {
              <h3 className='product-title'>Product</h3>
              <h3 className='price'>Price</h3>
              <h3 className='quantity'>Quantity</h3>
-             <h3 className='subtotal'>Subtotal</h3>
+             <h3 className={classes.subtotal}>Subtotal</h3>
            </div>
-           <div className={classes.item}>
+           <div className="cart-items">
              {cart.cartItems?.map(cartItem => (
-                <div className='cart-item' key={cartItem.id}>
-                   <div className='cart-product'>
+                <div className={classes.items} key={cartItem.id}>
+                   <div className={classes.product}>
+                     <div className={classes.removebtn}><button className={classes.removeitem}>X</button></div>
                       <img src={cartItem.image} alt={cartItem.name}/>
                       <div>
                           <h3>{cartItem.name}</h3>
@@ -34,7 +34,7 @@ const Cart = () => {
                        <div className='count'>{cartItem.cartQuantity}</div>
                        <button>+</button>
                    </div>
-                   <div className='cart-product-subtotal-price'>
+                   <div className={classes.totalprice}>
                        ${cartItem.price * cartItem.cartQuantity}
                    </div>
                 </div> 

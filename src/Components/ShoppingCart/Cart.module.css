@@ -1,10 +1,20 @@
 .container {
     width: 100%;
+    margin-top: 10%;
+    font-family: Roboto, sans-serif;
 }
 .container h2 {
     font-weight: 400;
     font-size: 30px;
     text-align: center;
+}
+
+.container .titles {
+    margin: 2rem 0 1rem 0;
+}
+
+.container .titles h3 {
+    font-size: 18px;
 }
 
 .items, .container .titles {
@@ -15,11 +25,51 @@
 }
 
 .items {
-    border-top: 1px solid rgb(187,187,187);
+    border-top: 1px solid #20D3C2;
     padding: 1rem 0;
 }
 
 .titles .product-title {
     padding-left: 0.5rem;
+}
+
+.removeitem {
+    width: 25px;
+    height: 25px;
+    max-width: 100%;
+    border-radius: 50%;
+    background-color: grey;
+    border: none;
+    color: white;
+}
+
+.removebtn {
+    
+}
+
+.subtotal {
+    padding-right: 0.5rem;
+    justify-self: right;
+}
+
+.totalprice {
+    color: #20D3C2;
+    font-weight: bold;
+}
+
+.items .product {
+    display: flex;
+}
+
+.items .product img {
+    width: 100px;
+    max-width: 100%;
+    margin-right: 1rem;
+}
+
+.items .product h3 {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 50%;
 }
 
