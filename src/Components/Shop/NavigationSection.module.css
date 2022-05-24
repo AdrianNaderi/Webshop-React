@@ -1,0 +1,15 @@
+.container {
+  display: inline-block;
+  padding-top:15px;
+  padding-bottom: 15px;
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 31px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #AAAAAA;
+}
