@@ -1,9 +1,8 @@
 import { GetFilterData, GetFilteredProducts, GetProducts } from "../endpoints";
 import { transformFilterDataCategories, transformFilterDataColors, transformFilterDataSizes } from "../Transform/filter";
 
-export const getAllProductsWithFilterAsync = async (category, color, size, brand, onSale, inStock) => {
-  console.log(category);
-  const filterParameters = { category: category, color: color, size: size, brand: brand, onSale: onSale, inStock: inStock };
+export const getAllProductsWithFilterAsync = async (filter) => {
+  const filterParameters = { category: filter.category, color: filter.color, size: filter.size, brand: filter.brand, onSale: filter.onSale, inStock: filter.inStock, displayCount: filter.displayCount, page: filter.page };
   const response = await fetch(GetFilteredProducts, {
     method: "POST",
     body: JSON.stringify(filterParameters),
@@ -18,7 +17,10 @@ export const getAllProductsWithFilterAsync = async (category, color, size, brand
   return jsonStr;
 };
 
-export const getAllProducts = async () => {
+export const getAllProducts = async (displayOptions) => {
+  console.log(displayOptions.count);
+  console.log(displayOptions.page);
+
   const response = await fetch(GetProducts);
   if (!response.ok) {
     throw new Error("Something went wrong");

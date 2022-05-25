@@ -4,14 +4,14 @@ import RangeFilter from "./RangeFilter";
 import { useDispatch, useSelector } from "react-redux";
 import { filterActions } from "../../store/filter-slice";
 import useHttp from "../../hooks/useHttp";
-import { getAllProducts, getAllProductsWithFilterAsync, getFilterDataAsync } from "../../lib/Filter/ShopFilterRequests";
+import { getFilterDataAsync } from "../../lib/Filter/ShopFilterRequests";
 import BrandFiltering from "./BrandFiltering";
 import ProductStatusFilters from "./ProductStatusFilters";
 import { useEffect } from "react";
 
 const ShopFilterSection = () => {
   const dispatch = useDispatch();
-  const { sendReq, data, error, loading } = useHttp(getFilterDataAsync, true); //Will be moved to the place where we display products.
+  const { sendReq, data, error, loading } = useHttp(getFilterDataAsync, true);
 
   useEffect(() => {
     sendReq();
