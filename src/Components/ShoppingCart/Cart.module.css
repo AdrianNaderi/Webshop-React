@@ -10,7 +10,7 @@
 }
 
 .container .titles {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 0 0;
 }
 
 .container .titles h3 {
@@ -55,6 +55,7 @@
 .totalprice {
     color: #20D3C2;
     font-weight: bold;
+    justify-self: right;
 }
 
 .items .product {
@@ -71,5 +72,66 @@
     font-weight: 400;
     font-size: 16px;
     margin-top: 50%;
+}
+
+.quantity {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    max-width: 100%;
+    border: 0.5px solid rgb(177,177,177);
+    border-radius: 5px;
+}
+
+.quantity button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+}
+
+.quantity .count {
+    padding: 0.7rem 0;
+}
+
+.summary {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.checkout {
+    width: 270px;
+    max-width: 100%;
+}
+.checkout .subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.checkout .amount {
+    font-weight: 700;
+    color: #20D3C2;
+}
+
+.checkout .proceed {
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #20D3C2;
+    color: white;
+    margin-bottom: 1rem;
 }
 

@@ -6,8 +6,10 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/index";
 import { productsFetch } from "./store/product-slice";
+import { getTotals } from "./store/cart-slice";
 
 store.dispatch(productsFetch());
+store.dispatch(getTotals());
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

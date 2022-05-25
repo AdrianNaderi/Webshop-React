@@ -1,9 +1,28 @@
+import { useEffect } from 'react';
 import React from 'react'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart, decreaseCart, getTotals, removeFromCart } from '../../store/cart-slice';
 import classes from "./Cart.module.css"
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart)
+    const dispatch = useDispatch();
+
+    useEffect(() =>{
+       dispatch(getTotals());
+    }, [cart, dispatch]);
+    
+    const handleRemoveFromCart = (cartItem) =>{
+        dispatch(removeFromCart(cartItem));
+    };
+
+    const handleDecreaseCart = (cartItem) => {
+      dispatch(decreaseCart(cartItem));
+    };
+
+    const handleIncreaseCart = (cartItem) => {
+      dispatch(addToCart(cartItem));
+    };
     return (
      <div className={classes.container}>
        {cart.cartItems.lenght === 0 ? (
@@ -22,17 +41,17 @@ const Cart = () => {
              {cart.cartItems?.map(cartItem => (
                 <div className={classes.items} key={cartItem.id}>
                    <div className={classes.product}>
-                     <div className={classes.removebtn}><button className={classes.removeitem}>X</button></div>
+                     <div className={classes.removebtn}><button className={classes.removeitem} onClick={() =>handleRemoveFromCart(cartItem)}>X</button></div>
                       <img src={cartItem.image} alt={cartItem.name}/>
                       <div>
                           <h3>{cartItem.name}</h3>
                       </div>
                    </div>
                    <div className='cart-product-price'>${cartItem.price}</div>
-                   <div className='cart-product-quantity'>
-                       <button>-</button>
-                       <div className='count'>{cartItem.cartQuantity}</div>
-                       <button>+</button>
+                   <div className={classes.quantity}>
+                       <button onClick={() => handleDecreaseCart(cartItem)}>-</button>
+                       <div className={classes.count}>{cartItem.cartQuantity}</div>
+                       <button onClick={() => handleIncreaseCart(cartItem)}>+</button>
                    </div>
                    <div className={classes.totalprice}>
                        ${cartItem.price * cartItem.cartQuantity}
@@ -40,13 +59,13 @@ const Cart = () => {
                 </div> 
              ))} 
            </div>
-           <div className='cart-summary'>
-               <div className='cart-checkout'>
-                   <div className='total'>
+           <div className={classes.summary}>
+               <div className={classes.checkout}>
+                   <div className={classes.subtotal}>
                        <span>TOTAL</span>
-                       <span className='amount'>${cart.cartTotalAmount}</span>
+                       <span className={classes.amount}>${cart.cartTotalAmount}</span>
                    </div>
-                   <button>PROCEED TO CHECKOUT</button>
+                   <button className={classes.proceed}>PROCEED TO CHECKOUT</button>
                </div>
            </div>
          </div>
