@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cart-slice";
 import classes from "./ProductDetail.module.css";
 import ProductDetailCart from "./ProductDetailCart";
 
 const ProductDetail = () => {
   const params = useParams();
+  const dispatch = useDispatch();
   const [product, SetProduct] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -31,7 +33,26 @@ const ProductDetail = () => {
   }, [fetchProductHandler]);
 
   const addToCartHandler = (counter) => {
+    if (counter === 0) {
+      return;
+    }
     const quantity = counter;
+    const priceToCart = (onSale) => {
+      if (onSale) {
+        return product.salePrice;
+      } else {
+        return product.price;
+      }
+    };
+    const productToCart = {
+      id: product.Id,
+      name: product.name,
+      description: product.description,
+      price: priceToCart(product.onSale),
+      cartQuantity: quantity,
+      image: product.imagePath,
+    };
+    dispatch(addToCart(productToCart));
   };
 
   const tags = ["Fashion", "Shoes", "Sneakers"].map((item) => <button>{item}</button>);
