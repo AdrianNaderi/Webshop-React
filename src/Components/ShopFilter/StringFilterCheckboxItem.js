@@ -21,8 +21,3 @@ const StringFilterCheckboxItem = (props) => {
 };
 
 export default StringFilterCheckboxItem;
-
-{
-  /* <input className={classes.check} type="checkbox" checked={props.active} />
-{props.item.name} */
-}
