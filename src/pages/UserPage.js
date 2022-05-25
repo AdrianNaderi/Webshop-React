@@ -30,6 +30,17 @@ const UserPage = () => {
     setError("");
   };
 
+  const handleTest = async () => {
+    var result = await fetch("https://localhost:7001/api/Users/Test", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia2Vua2F0YSIsIm5iZiI6MTY1MzUwMjIyNSwiZXhwIjoxNjUzNTA5NDI1LCJpYXQiOjE2NTM1MDIyMjV9.6ZvUDh9mn7n2Zqo782bSrCStwLvkYXElKFA90ErzQr4`,
+      },
+    });
+    console.log(result);
+  };
+
   return (
     <>
       <h1>User Page </h1>;
@@ -45,6 +56,7 @@ const UserPage = () => {
       ) : (
         <LoginUser Login={Login} error={error} />
       )}
+      <button onClick={handleTest}>Test Auth</button>
     </>
   );
 };
