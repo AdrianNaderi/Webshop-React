@@ -39,3 +39,17 @@ const largegrid = { name: "largegrid", value: "bi bi-grid-3x3-gap-fill" };
 export const displayoptions = [list, smallgrid, largegrid];
 
 export const countOptions = [9, 12, 18, 24];
+
+const hot = { status: "hot", value: "hot" };
+const sale = { status: "sale", value: "-23%" };
+const news = { status: "new", value: "new" };
+
+export const statuses = [hot, sale, news];
+
+const pink = { color: "#E0ACD5" };
+const blue = { color: "#3993DD" };
+const beige = { color: "#F4EBE8" };
+const turqoise = { color: "#29E7CD" };
+const bole = { color: "#6A3E37" };
+
+export const colores = [pink, blue, beige, turqoise, bole]
