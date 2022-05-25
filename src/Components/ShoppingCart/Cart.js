@@ -51,7 +51,7 @@ const Cart = () => {
                    <div className={classes.quantity}>
                        <button onClick={() => handleDecreaseCart(cartItem)}>-</button>
                        <div className={classes.count}>{cartItem.cartQuantity}</div>
-                       <button onClick={() => handleIncreaseCart(cartItem)}>+</button>
+                       <button className={classes.increase} onClick={() => handleIncreaseCart(cartItem)}>+</button>
                    </div>
                    <div className={classes.totalprice}>
                        ${cartItem.price * cartItem.cartQuantity}

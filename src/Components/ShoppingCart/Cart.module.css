@@ -41,6 +41,7 @@
     background-color: grey;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 .removebtn {
@@ -98,6 +99,8 @@
 }
 
 .summary {
+    border-top: 1px solid #20D3C2;
+    padding: 1rem 0;
     display: flex;
     justify-content: end;
     align-items: flex-start;
@@ -134,4 +137,5 @@
     color: white;
     margin-bottom: 1rem;
 }
+
 
