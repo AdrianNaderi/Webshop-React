@@ -30,21 +30,21 @@ const ProductCard = (props) => {
             <div className={classes.card}>
               <StatusIconSection />
               <div className={classes.lower}>
-                <span className={classes["product-name"]}>This is the dress displayed</span>
+                <span className={classes["product-name"]}>{props.product.name}</span>
               </div>
             </div>
-            <img src="/img/dress.png" className={classes.img} />
+            <img src={props.product.imagePath} className={classes.img} />
           </>
         )}
         {activeState && (
           <>
             <div className={classes["card-back"]}>
-              <div>Nav</div>
               <div className={classes.liftup}>
-                <NavigationSection />
+                <NavigationSection colors={props.product.colors}/>
               </div>
+              <div className={classes["product-name"]}>{props.product.description}</div>
             </div>
-            <img src="/img/dress.png" className={classes.imgback} />
+            <img src={props.product.imagePath} className={classes.imgback} />
           </>
         )}
       </div>

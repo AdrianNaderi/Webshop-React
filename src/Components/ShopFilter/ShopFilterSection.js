@@ -80,14 +80,6 @@ const ShopFilterSection = () => {
         />
         <StringFilter
           title={"Filter by Size"}
-          items={sizes}
-          onFiltering={(size) => handleSizeFiltering(size)}
-          onRemoveFilter={() => {
-            dispatch(filterActions.resetSizeFilter());
-          }}
-        />
-        <StringFilter
-          title={"Filter by Size"}
           items={data.sizes}
           onFiltering={(size) => handleSizeFiltering(size)}
           onRemoveFilter={() => {

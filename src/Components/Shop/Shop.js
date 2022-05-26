@@ -9,7 +9,6 @@ const Shop = () => {
   const color = useSelector((state) => state.filter.colors);
   const size = useSelector((state) => state.filter.sizes);
   const brand = useSelector((state) => state.filter.brand);
-
   const onSale = useSelector((state) => state.filter.onSale);
   const inStock = useSelector((state) => state.filter.inStock);
   const displayCount = useSelector((state) => state.filter.displayCount);
@@ -19,14 +18,15 @@ const Shop = () => {
   useEffect(() => {
     sendReq({ category, color, size, brand, onSale, inStock, displayCount, page });
   }, [category, color, size, brand, onSale, inStock, displayCount, page]);
-  return (
-    <div className={classes.grid}>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-    </div>
-  );
+
+  if (loading) {
+    <>loading</>;
+  }
+
+  if (data) {
+    const content = data.map((product) => <ProductCard key={product.id} product={product} />);
+    return <div className={classes.grid}>{content}</div>;
+  }
 };
 
 export default Shop;
