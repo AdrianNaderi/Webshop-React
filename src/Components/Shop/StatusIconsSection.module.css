@@ -3,6 +3,7 @@
   margin-left: 10px;
   display: inline-block;
   position: absolute;
+  z-index: 999;
 }
 
 .icons {

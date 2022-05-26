@@ -27,7 +27,7 @@ const filterSlice = createSlice({
       state.colors = action.payload.color;
     },
     resetColorFilter(state) {
-      state.categories = "";
+      state.colors = "";
     },
     setSizeFilter(state, action) {
       state.sizes = action.payload.size;

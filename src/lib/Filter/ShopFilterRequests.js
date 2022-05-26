@@ -1,5 +1,6 @@
 import { GetFilterData, GetFilteredProducts, GetProducts } from "../endpoints";
 import { transformFilterDataCategories, transformFilterDataColors, transformFilterDataSizes } from "../Transform/filter";
+import { transformShopProduct } from "../Transform/products";
 
 export const getAllProductsWithFilterAsync = async (filter) => {
   const filterParameters = { category: filter.category, color: filter.color, size: filter.size, brand: filter.brand, onSale: filter.onSale, inStock: filter.inStock, displayCount: filter.displayCount, page: filter.page };
@@ -14,6 +15,7 @@ export const getAllProductsWithFilterAsync = async (filter) => {
     throw new Error("Something went wrong");
   }
   const jsonStr = await response.json();
+  transformShopProduct(jsonStr);
   return jsonStr;
 };
 
