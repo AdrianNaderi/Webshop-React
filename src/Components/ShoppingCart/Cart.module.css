@@ -22,10 +22,11 @@
     align-items: center;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     column-gap: 0.5rem;
+    border-bottom: 1px solid #20D3C2;
 }
 
 .items {
-    border-top: 1px solid #20D3C2;
+    border-bottom: 1px solid #e3e3e3;
     padding: 1rem 0;
 }
 
@@ -45,7 +46,7 @@
 }
 
 .removebtn {
-    
+    padding-top: 32px;
 }
 
 .subtotal {
@@ -99,7 +100,6 @@
 }
 
 .summary {
-    border-top: 1px solid #20D3C2;
     padding: 1rem 0;
     display: flex;
     justify-content: end;
