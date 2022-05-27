@@ -15,8 +15,8 @@ const StringFilter = (props) => {
     props.onFiltering(name);
     setTarget(name);
   };
+  
   let showCategories;
-
   if (props.checkbox) {
     showCategories = props.items.map((item) => <StringFilterCheckboxItem key={item.name} item={item} active={item.name === target ? true : false} onActive={handleActive} />);
   } else {

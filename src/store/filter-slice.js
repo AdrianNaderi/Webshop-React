@@ -9,6 +9,8 @@ const initialSearchFilter = {
   brand: "",
   orderBy: "Ascending",
   display: "list",
+  displayCount: 9,
+  page: 1,
 };
 
 const filterSlice = createSlice({
@@ -25,7 +27,7 @@ const filterSlice = createSlice({
       state.colors = action.payload.color;
     },
     resetColorFilter(state) {
-      state.categories = "";
+      state.colors = "";
     },
     setSizeFilter(state, action) {
       state.sizes = action.payload.size;
@@ -37,7 +39,7 @@ const filterSlice = createSlice({
       state.onSale = "On Sale";
     },
     resetOnSaleFilter(state) {
-      state.sizes = "";
+      state.onSale = "";
     },
     setInStockFilter(state) {
       state.inStock = "In Stock";
@@ -55,10 +57,13 @@ const filterSlice = createSlice({
       state.orderBy = action.payload.orderBy;
     },
     setDisplayCount(state, action) {
-      state.orderBy = action.payload.displayCount;
+      state.displayCount = action.payload.displayCount;
     },
     setDisplay(state, action) {
       state.display = action.payload.display;
+    },
+    setPage(state, action) {
+      state.page = action.payload.page;
     },
   },
 });

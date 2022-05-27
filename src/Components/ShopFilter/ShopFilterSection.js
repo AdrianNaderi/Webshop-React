@@ -4,17 +4,18 @@ import RangeFilter from "./RangeFilter";
 import { useDispatch, useSelector } from "react-redux";
 import { filterActions } from "../../store/filter-slice";
 import useHttp from "../../hooks/useHttp";
-import { getAllProducts, getAllProductsWithFilterAsync } from "../../lib/Filter/ShopFilterRequests";
-import { GetFilteredProducts } from "../../lib/endpoints";
-import Brands from "../Brands/Brands";
+import { getFilterDataAsync } from "../../lib/Filter/ShopFilterRequests";
 import BrandFiltering from "./BrandFiltering";
 import ProductStatusFilters from "./ProductStatusFilters";
+import { useEffect } from "react";
 
 const ShopFilterSection = () => {
   const dispatch = useDispatch();
-  const { sendReq, data, error, loading } = useHttp(getAllProductsWithFilterAsync); //Will be moved to the place where we display products.
+  const { sendReq, data, error, loading } = useHttp(getFilterDataAsync, true);
 
-  console.log(data);
+  useEffect(() => {
+    sendReq();
+  }, []);
 
   const handleCategoryFiltering = (category) => {
     dispatch(filterActions.setCategoryFilter({ category: category }));
@@ -48,55 +49,57 @@ const ShopFilterSection = () => {
     dispatch(filterActions.setBrandFilter({ brand: brand }));
   };
 
-  return (
-    <>
-      <StringFilter
-        title={"Product Categories"}
-        items={categories}
-        onFiltering={(category) => handleCategoryFiltering(category)}
-        onRemoveFilter={() => {
-          dispatch(filterActions.resetCategoryFilter());
-        }}
-      />
-      <RangeFilter title={"Filter by Price"} />
-      <StringFilter
-        title={"Filter by Color"}
-        items={colors}
-        checkbox={true}
-        onFiltering={(color) => handleColorFiltering(color)}
-        onRemoveFilter={() => {
-          dispatch(filterActions.resetColorFilter());
-        }}
-      />
-      <StringFilter
-        title={"Filter by Size"}
-        items={sizes}
-        onFiltering={(size) => handleSizeFiltering(size)}
-        onRemoveFilter={() => {
-          dispatch(filterActions.resetSizeFilter());
-        }}
-      />
-      <StringFilter
-        title={"Filter by Size"}
-        items={sizes}
-        onFiltering={(size) => handleSizeFiltering(size)}
-        onRemoveFilter={() => {
-          dispatch(filterActions.resetSizeFilter());
-        }}
-      />
-      <div>
-        <BrandFiltering
-          title="Filter by Brand"
-          brands={brands}
-          onFiltering={(brand) => handleBrandFiltering(brand)}
+  if (loading) {
+    return (
+      <>
+        <p>Loading</p>
+      </>
+    );
+  }
+
+  if (!loading) {
+    return (
+      <>
+        <StringFilter
+          title={"Product Categories"}
+          items={data.categories}
+          onFiltering={(category) => handleCategoryFiltering(category)}
           onRemoveFilter={() => {
-            dispatch(filterActions.resetBrandFilter());
+            dispatch(filterActions.resetCategoryFilter());
           }}
         />
-      </div>
-      <ProductStatusFilters title="Product Status" onSaleChange={(e) => hanndleOnSaleFiltering(e)} onStockChange={(e) => hanndleInStockFiltering(e)} />
-    </>
-  );
+        <RangeFilter title={"Filter by Price"} />
+        <StringFilter
+          title={"Filter by Color"}
+          items={data.colors}
+          checkbox={true}
+          onFiltering={(color) => handleColorFiltering(color)}
+          onRemoveFilter={() => {
+            dispatch(filterActions.resetColorFilter());
+          }}
+        />
+        <StringFilter
+          title={"Filter by Size"}
+          items={data.sizes}
+          onFiltering={(size) => handleSizeFiltering(size)}
+          onRemoveFilter={() => {
+            dispatch(filterActions.resetSizeFilter());
+          }}
+        />
+        <div>
+          <BrandFiltering
+            title="Filter by Brand"
+            brands={brands}
+            onFiltering={(brand) => handleBrandFiltering(brand)}
+            onRemoveFilter={() => {
+              dispatch(filterActions.resetBrandFilter());
+            }}
+          />
+        </div>
+        <ProductStatusFilters title="Product Status" onSaleChange={(e) => hanndleOnSaleFiltering(e)} onStockChange={(e) => hanndleInStockFiltering(e)} />
+      </>
+    );
+  }
 };
 
 export default ShopFilterSection;
