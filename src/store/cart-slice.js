@@ -16,7 +16,7 @@ const product2 = ({
 });
 
 const initialState = {
-    cartItems: [product1, product2],
+    cartItems: [],
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
 };
