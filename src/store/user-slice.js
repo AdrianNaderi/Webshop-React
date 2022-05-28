@@ -1,25 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loginUser } from "../lib/User/UserRequests";
 
 const initialState = {
-    user: [],
-    
+  userName: "",
+  userEmail: "",
+  token: "",
 };
 
-const cartSlice = createSlice ({
-    name: "cart",
-    initialState,
-    reducers: {
-        addToCart(state, action) {
-            const itemIndex = state.cartItems.findIndex((item) => item.id === action.payload.id);
-              if(itemIndex >= 0){
-                  state.cartItems[itemIndex].cartTotalQuantity += 1
-              } else {
-                  const tempProduct = {...action.payload, cartTotalQuantity: 1};
-                  state.cartItems.push(tempProduct);
-              }
-        },
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+  reducers: {
+    loginUser(state, action) {
+      console.log(action.payload);
+      state.userName = action.payload.name;
+      state.userEmail = action.payload.email;
+      state.token = action.payload.token;
     },
+  },
 });
 
-export const { addToCart } = cartSlice.actions;
-export default cartSlice.reducer;
+export const userActions = userSlice.actions;
+export default userSlice;
+
+export const loginThunk = (user) => {
+  return async (dispatch) => {
+    const userSuccessful = await loginUser(user);
+    dispatch(userActions.loginUser({ ...userSuccessful }));
+  };
+};

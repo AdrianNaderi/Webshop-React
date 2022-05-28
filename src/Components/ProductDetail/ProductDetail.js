@@ -16,7 +16,7 @@ const ProductDetail = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const respons = await fetch(`https://localhost:44300/api/Products/${params.productId}`);
+      const respons = await fetch(`https://localhost:7001/api/Products/${params.productId}`);
       if (!respons.ok) {
         throw new Error("Something went wrong!");
       }
