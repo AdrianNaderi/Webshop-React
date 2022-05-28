@@ -1,14 +1,25 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import LoginUser from "../Components/LoginUser/LoginUser";
-import { loginThunk } from "../store/user-slice";
+import { loginThunk, userActions } from "../store/user-slice";
 
 const UserPage = () => {
   const dispatch = useDispatch();
+  const handleLogout = () => {
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+    localStorage.removeItem("token");
+    dispatch(userActions.resetUser());
+  };
+
   const Login = (details) => {
     dispatch(loginThunk({ details }));
   };
-  return <LoginUser Login={Login} />;
+  return (
+    <>
+      <LoginUser Login={Login} />;<button onClick={handleLogout}>Log Out</button>
+    </>
+  );
 };
 export default UserPage;
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
@@ -19,8 +19,20 @@ import TeamPage from "./pages/TeamPage";
 import PortfolioPage from "./pages/PortFolioPage";
 import PortFolioDetailPage from "./pages/PortFolioDetailPage";
 import ContactPage from "./pages/ContactPage";
+import { useDispatch } from "react-redux";
+import { userActions } from "./store/user-slice";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const name = localStorage.getItem("name");
+    if (name) {
+      const email = localStorage.getItem("email");
+      const token = localStorage.getItem("token");
+      dispatch(userActions.rebootUser({ name, email, token }));
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
